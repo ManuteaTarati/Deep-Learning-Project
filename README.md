@@ -3,7 +3,7 @@
 
 ## Introduction
 This is the Github Repository of our Deep Learning Project, where we worked on Time Series Benchmarking. We benchmarked a few models: NBeats (a pure deep learning model
-developed by Element AI), Prophets (a statistical model developed by Facebook), and ES-RNN (a hybrid model developed by Smyl, winner of the M4 competition). 
+developed by Element AI), Prophets (a statistical model developed by Facebook), and ES-RNN (a hybrid model developed by Smyl, winner of the M4 competition). \
 INSERT ORGANISATION OF FOLDERS \
 In order to keep this `README` file short and concise, we only provide an analysis on the results. For the code, refer to the relevant `jupyter` notebook. For a theoretical summary on the models, refer to the link below.
 

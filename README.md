@@ -40,6 +40,7 @@ To measure the performance of the various models, we used the same benchmark des
  
  [<img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/yearly_prophet.png">](https://github.com/sunnywang93/Deep-Learning-Project/blob/main/yearly_prophet.png/)
  
+ The black points represents our observations, while the blue line represents our in-sample fit. The blue area around the line is the confidence interval of our fit.
  
  ### NBeats
  

@@ -10,10 +10,10 @@ This README file only contains a summary of our findings of the various models. 
 ## Important links 
 
 * Theoretical Summary: https://drive.google.com/uc?export=download&id=1cCb9SroZqGw1wGVDrGHjs3em8eX7_orD  
-* Original Papers: \
-  * [NBeats]: https://drive.google.com/file/d/1x_G4pWQpHMl-etyAt9qOxV7f1gMnfODp/view?usp=sharing 
-  * [Prophet]: https://drive.google.com/file/d/1Q2f4CQeeNt_YXlqo_E2_CJArUqDIcTq7/view?usp=sharing 
-  * [ES-RNN]: https://eng.uber.com/m4-forecasting-competition/
+* Original Papers: 
+  * [NBeats]: (https://drive.google.com/file/d/1x_G4pWQpHMl-etyAt9qOxV7f1gMnfODp/view?usp=sharing)
+  * [Prophet]: (https://drive.google.com/file/d/1Q2f4CQeeNt_YXlqo_E2_CJArUqDIcTq7/view?usp=sharing)
+  * [ES-RNN]: (https://eng.uber.com/m4-forecasting-competition/)
   
 ## Analysis
 

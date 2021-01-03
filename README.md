@@ -10,7 +10,7 @@ In order to keep this `README` file short and concise, we only provide an analys
 
 ## Important links 
 
-* Theoretical Summary: https://drive.google.com/uc?export=download&id=1cCb9SroZqGw1wGVDrGHjs3em8eX7_orD  
+* Theoretical Summary: https://drive.google.com/uc?export=download&id=1JH89berkZJsZr3Scqmxenq3A60DYOHzR
 * Original Papers: 
   * NBeats: https://drive.google.com/file/d/1x_G4pWQpHMl-etyAt9qOxV7f1gMnfODp/view?usp=sharing
   * Prophet: https://drive.google.com/file/d/1Q2f4CQeeNt_YXlqo_E2_CJArUqDIcTq7/view?usp=sharing

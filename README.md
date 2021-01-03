@@ -38,7 +38,7 @@ To measure the performance of the various models, we used the same benchmark des
  
  In addition to solely looking at the scores, we can also take a look at the plots to see how the forecasts perform in general. Let us take a look at the plot for the yearly series:
  
- [<img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/yearly_prophet.png">](http://google.com.au/)
+ [<img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/yearly_prophet.png">](https://github.com/sunnywang93/Deep-Learning-Project/blob/main/yearly_prophet.png/)
  
  
  ### NBeats

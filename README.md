@@ -44,7 +44,7 @@ To measure the performance of the various models, we used the same benchmark des
  
  ### NBeats
  
- NBeats is a _pure_ deep learning model developed by Element AI for time series forecasting. This makes it substantially different from Prophet, which is a statistical model. 
+ NBeats is a _pure_ deep learning model developed by Element AI for time series forecasting. This makes it substantially different from Prophet, which is a statistical model. The original developers have demonstrated that NBeats has outperformed even the best submissions in the M4 competition. However, since we are unable to work on the full dataset, we wanted to see how it stacks up against the other methods when there is much less data to train on. This is a test on just how flexible it is - while deep learning models like these can be extremely powerful, they require large amounts of data to train on. In addition, they suffer in interpretability and transparency relative to statistical methods due to their "black box" nature. While the authors have proposed specific configurations to make it more interpretable, we are still of the opinion that it is still not as interpretable as pure statistical methods. This is not necessarily a bad thing, since the benefits of interpretability highly depends on the application domain. Similar to before, we first look at the scores when trained on our data subset:
  
  
  

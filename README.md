@@ -26,13 +26,13 @@ To measure the performance of the various models, we used the same benchmark des
  
 |   | sMAPE     | MASE     | OWA |
 |---|-----------|----------|-----|
-|   | 12.061665 | 2.945491 | 1   |
+|   | 12.061665 | 2.4 | 1   |
  
  As expected, we can see that the sMAPE and MASE for the baseline Naive 2 model is bigger than if trained on the entire 100,000 time series. The values seen here are the ones we use as the baseline reference, and thus the OWA score is 1. After running our prophet model, we get the following scores:
  
 |   | sMAPE     | MASE     | OWA  |
 |---|-----------|----------|------|
-|   | 20.087469 | 5.632893 | 1.82 |
+|   | 13.38 | 4.7 | 1.86 |
  
  and by OWA score of around 1.82. That is, the Prophet model performs _considerably_ worse than the Naive 2 benchmark. Although this might seem surprising, we have a few conjectures for why this is the case. Firstly, Prophet is at its heart a non-parametric statistical model. There are several parameters that can be tuned, such as the trend and seasonality parameters. Since Prophet was originally built for business forecasting purposes, it works best when the analyst using Prophet possess substantial knowledge about the time series they're working with in order to make judgements about how to tune the parameters. Unfortunately, for the case of the M4 dataset, no information was released about the nature of the time series, and using domain knowledge to tune the parameters wasn't possible for us. However, we conjecture that for an analyst with expert domain knowledge, Prophet will probably perform way better than baseline models such as the Naive 2 or ARIMA models. 
  

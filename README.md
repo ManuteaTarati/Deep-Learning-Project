@@ -26,7 +26,7 @@ To measure the performance of the various models, we used the same benchmark des
  
 |   | sMAPE     | MASE     | OWA |
 |---|-----------|----------|-----|
-|   | 12.061665 | 2.4 | 1   |
+|   | 7.79 | 2.34 | 1   |
  
  As expected, we can see that the sMAPE and MASE for the baseline Naive 2 model is bigger than if trained on the entire 100,000 time series. The values seen here are the ones we use as the baseline reference, and thus the OWA score is 1. After running our prophet model, we get the following scores:
  
@@ -34,7 +34,7 @@ To measure the performance of the various models, we used the same benchmark des
 |---|-----------|----------|------|
 |   | 13.38 | 4.7 | 1.86 |
  
- and by OWA score of around 1.86. That is, the Prophet model performs _considerably_ worse than the Naive 2 benchmark. Although this might seem surprising, we have a few conjectures for why this is the case. Firstly, Prophet is at its heart a non-parametric statistical model. There are several parameters that can be tuned, such as the trend and seasonality parameters. Since Prophet was originally built for business forecasting purposes, it works best when the analyst using Prophet possess substantial knowledge about the time series they're working with in order to make judgements about how to tune the parameters. Unfortunately, for the case of the M4 dataset, no information was released about the nature of the time series, and using domain knowledge to tune the parameters wasn't possible for us. However, we conjecture that for an analyst with expert domain knowledge, Prophet will probably perform way better than baseline models such as the Naive 2 or ARIMA models. 
+ and by OWA score of around 1.86. That is, the Prophet model performs _considerably_ worse than the Naive 2 benchmark. Although this might seem surprising, we have a few conjectures for why this is the case. Firstly, Prophet is at its heart a non-parametric statistical model. There are several parameters that can be tuned, such as the trend and seasonality parameters. Since Prophet was originally built for business forecasting purposes, it works best when the analyst using Prophet possess substantial knowledge about the time series they're working with in order to make judgements about how to tune the parameters. Unfortunately, for the case of the M4 dataset, no information was released about the nature of the time series, and using domain knowledge to tune the parameters wasn't possible for us. However, we conjecture that for an analyst with expert domain knowledge, Prophet will probably perform way better than baseline models such as the Naive 2 or ARIMA models. Secondly, we only used a small subset of full M4 dataset, and there might be some sparsity issues (in the sense that the sample size is not large enough) which affect the performance of this non-parametric model. Non-parametric models typically require a lot more data than fully parametric ones, since there must be sufficient data to "speak" about both the model structure _and_ its parameters.
  
  In addition to solely looking at the scores, we can also take a look at the plots to see how the forecasts perform in general. Let us take a look at the plot for the yearly series:
  
@@ -49,7 +49,7 @@ To measure the performance of the various models, we used the same benchmark des
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Hourly_Prophet.png" width="500" />
 </p>
 
-We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample.
+We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. 
  
  ### NBeats
  
@@ -60,6 +60,8 @@ We can see from the plots that regardless of the frequency, Prophet's prediction
  ### ES-RNN
  
  The Exponential Smoothing-Recurrent Neural Network is a hybrid model developed by Slawek Smyl, the winner of the M4 competition. It is a hybrid model in the sense that it combines both statistical modelling and machine learning components in one model. The key idea is to use exponential smoothing (the statistical part) to model the seasonality of the data for on-the-fly pre-processing, and then pass the processed data into a LSTM type neural network for prediction. This combines the best of both the statistical and deep learning worlds, since the statistical model captures the main components of each individual series such as seasonality and level, while the LSTM network enables non-linear trends and cross-learning. Again, we look at the scores when trained on our data subset: 
+ 
+ 
  
  
  

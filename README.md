@@ -46,6 +46,7 @@ To measure the performance of the various models, we used the same benchmark des
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Quarterly_Prophet.png" width="500" />
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Monthly_Prophet.png" width="500" /> 
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Daily_Prophet.png" width="500" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Hourly_Prophet.png" width="500" />
 </p>
  
  ### NBeats

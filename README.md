@@ -43,9 +43,9 @@ To measure the performance of the various models, we used the same benchmark des
  The black points represents our observations in the training set, while the red dots represents observations in the test set. The blue line up to the last black dot represents our in-sample fit, and out-of-sample forecasts in the region of the red dots. The blue area around the line is the confidence interval of our fit. We can see that the predictions do not perform well - only 4 out of the 6 forecasts are within the confidence interval and only one test sample lies on the forecast line. This is in line with our performance measures, since the Prophet model performs significantly worse than even the Naive 2 benchmark. Let us look at the other plots for the different frequencies:
  
  <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Quarterly_Prophet.png" width="100" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Monthly_Prophet.png" width="100" /> 
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Daily_Prophet.png" width="100" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Quarterly_Prophet.png" width="500" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Monthly_Prophet.png" width="500" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Daily_Prophet.png" width="500" />
 </p>
  
  ### NBeats

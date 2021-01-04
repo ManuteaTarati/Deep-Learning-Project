@@ -42,6 +42,12 @@ To measure the performance of the various models, we used the same benchmark des
  
  The black points represents our observations in the training set, while the red dots represents observations in the test set. The blue line up to the last black dot represents our in-sample fit, and out-of-sample forecasts in the region of the red dots. The blue area around the line is the confidence interval of our fit. We can see that the predictions do not perform well - only 4 out of the 6 forecasts are within the confidence interval and only one test sample lies on the forecast line. This is in line with our performance measures, since the Prophet model performs significantly worse than even the Naive 2 benchmark. Let us look at the other plots for the different frequencies:
  
+ <p float="left">
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Quarterly_Prophet.png" width="100" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Monthly_Prophet.png" width="100" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Daily_Prophet.png" width="100" />
+</p>
+ 
  ### NBeats
  
  NBeats is a _pure_ deep learning model developed by Element AI for time series forecasting. This makes it substantially different from Prophet, which is a statistical model. The original developers have demonstrated that NBeats has outperformed even the best submissions in the M4 competition. However, since we are unable to work on the full dataset, we wanted to see how it stacks up against the other methods when there is much less data to train on. This is a test on just how flexible it is - while deep learning models like these can be extremely powerful, they require large amounts of data to train on. In addition, they suffer in interpretability and transparency relative to statistical methods due to their "black box" nature. While the authors have proposed specific configurations to make it more interpretable, we are still of the opinion that it is still not as interpretable as pure statistical methods. This is not necessarily a bad thing, since the benefits of interpretability highly depends on the application domain. Similar to before, we first look at the scores when trained on our data subset:

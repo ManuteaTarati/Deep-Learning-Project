@@ -49,3 +49,5 @@ To measure the performance of the various models, we used the same benchmark des
  
  
  ### ES-RNN
+ 
+ The Exponential Smoothing-Recurrent Neural Network is a hybrid model developed by Slawek Smyl, the winner of the M4 competition. It is a hybrid model in the sense that it combines both statistical modelling and machine learning components in one model. The key idea is to use exponential smoothing (the statistical part) to model the seasonality of the data for on-the-fly pre-processing, and then pass the processed data into a LSTM type neural network for prediction. This combines the best of both the statistical and deep learning worlds, since the statistical model captures the main components of each individual series such as seasonality and level, while the LSTM network enables non-linear trends and cross-learning. Again, we look at the scores when trained on our data subset: 

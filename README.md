@@ -2,7 +2,7 @@
 
 
 ## Introduction
-This is the Github Repository of our Deep Learning Project, where we worked on Time Series Benchmarking. We benchmarked a few models: NBeats (a pure deep learning model), Prophets (a statistical model), and ES-RNN (a hybrid model). \
+This is the Github Repository of the Deep Learning Project by Manutea Tarati and Sunny Wang, where we worked on Time Series Benchmarking. We benchmarked a few models: NBeats (a pure deep learning model), Prophets (a statistical model), and ES-RNN (a hybrid model). \
 INSERT ORGANISATION OF FOLDERS \
 In order to keep this `README` file short and concise, we only provide an analysis on the results. For the code, refer to the relevant folders. For a technical summary on the models, refer to the link below.
 

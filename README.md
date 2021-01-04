@@ -9,7 +9,7 @@ In order to keep this `README` file short and concise, we only provide an analys
 
 ## Important links 
 
-* Technical Summary: https://drive.google.com/uc?export=download&id=1YHZbR8TkujcWc_wkKIIcwTK_NbNSm71p
+* __Technical Summary__: https://drive.google.com/uc?export=download&id=1YHZbR8TkujcWc_wkKIIcwTK_NbNSm71p
 * Original Papers: 
   * NBeats: https://drive.google.com/file/d/1x_G4pWQpHMl-etyAt9qOxV7f1gMnfODp/view?usp=sharing
   * Prophet: https://drive.google.com/file/d/1Q2f4CQeeNt_YXlqo_E2_CJArUqDIcTq7/view?usp=sharing

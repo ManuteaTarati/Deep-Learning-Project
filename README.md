@@ -49,7 +49,7 @@ To measure the performance of the various models, we used the same benchmark des
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Hourly_Prophet.png" width="500" />
 </p>
 
-We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. 
+We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. Perhaps only the predictions from the Hourly frequency performs slightly better, since most of the test set lies in the confidence interval. Nevertheless, the point forecasts are still bad, but it looks for this particular frequency, the model is even struggling to do a good in-sample fit because of the structure of the data.
  
  ### NBeats
  

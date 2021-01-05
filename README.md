@@ -25,7 +25,7 @@ To measure the performance of the various models, we used the same benchmark des
 |-----------|----------|-----|
 | 7.79 | 2.34 | 1   |
  
- As expected, we can see that the sMAPE and MASE for the baseline Naive 2 model is bigger than if trained on the entire 100,000 time series. The values seen here are the ones we use as the baseline reference, and thus the OWA score is 1.
+ As expected, we can see that the sMAPE and MASE for the baseline Naive 2 model is bigger (smaller values are better) than if trained on the entire 100,000 time series. The values seen here are the ones we use as the baseline reference, and thus the OWA score is 1.
 
  ### Prophet
  We start our exposition with the Prophet model. After running our prophet model, we get the following scores:

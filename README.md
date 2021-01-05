@@ -49,7 +49,7 @@ To measure the performance of the various models, we used the same benchmark des
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Hourly_Prophet.png" width="400" />
 </p>
 
-We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. Perhaps only the predictions from the Hourly frequency performs slightly better, since most of the test set lies in the confidence interval. Nevertheless, the point forecasts are still bad, but it looks for this particular frequency, the model is even struggling to do a good in-sample fit because of the structure of the data.
+We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. Perhaps only the performance interval from the Hourly frequency performs slightly better, since most of the test set lies in the confidence interval. Nevertheless, the point forecasts are still bad, but it looks for this particular frequency, the model is even struggling to do a good in-sample fit because of the structure of the data.
  
  ### NBeats
  
@@ -66,7 +66,7 @@ Interestingly, we can see that NBeats performs _much worse overall_ when there i
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Hourly_NBeats.png" width="400" /> 
 </p>
  
- We can see that for these two frequencies, NBeats actually did a good job predicting the test data. Even though it failed to capture a lot of the fluctuations, it still predicted it in the same direction. This is already much better than Prophet's predictions, which did not even go in the same direction (i.e increasing or decreasing next). Let us now take a look at the frequencies  which were responsible for NBeat's horrible overall score:
+ For the plots hereafter, the plots are different to the Prophet case, since for these deep learning models, there is no in-sample fit on the data. It is simply used for training and only outputs the forecasts. We can see that for these two frequencies, NBeats actually did a good job predicting the test data. Even though it failed to capture a lot of the fluctuations, it still predicted it in the same direction. This is already much better than Prophet's predictions, which did not even go in the same direction (i.e increasing or decreasing next). Let us now take a look at the frequencies  which were responsible for NBeat's horrible overall score:
  
   <p float="left">
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Daily_NBeats.png" width="400" />

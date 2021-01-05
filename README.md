@@ -59,7 +59,7 @@ We can see from the plots that regardless of the frequency, Prophet's prediction
 |-------|-------|------|
 | 17.95 | 11.66 | 3.64 |
 
-Interestingly, we can see that NBeats performs _much worse overall_ when there is very little data to train on (100 time series instead of 100k). It performs even worse than Prophet, a statistical method. This is because while NBeats did well in some frequencies (monthly and hourly), it did extremely poorly on others (10 times worse), and the overall score is an average across all frequencies. Let us now take a look at the hourly and monthly plots, which were the ones which performed well:
+Interestingly, we can see that NBeats performs _much worse overall_ when there is very little data to train on (600 time series instead of 100k). It performs even worse than Prophet, a statistical method. This is because while NBeats did well in some frequencies (monthly and hourly), it did extremely poorly on others (10 times worse), and the overall score is an average across all frequencies. Let us now take a look at the hourly and monthly plots, which were the ones which performed well:
 
  <p float="left">
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Monthly_NBeats.png" width="400" />
@@ -73,7 +73,7 @@ Interestingly, we can see that NBeats performs _much worse overall_ when there i
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Weekly_NBeats.png" width="400" /> 
 </p>
  
-We can see that for both these frequencies, it generates huge amounts of un-necessary fluctuations. For example, in the Daily plot, all it needed to do was to predict an increasing trend, but instead it generated huge amounts of noise. The converse is true for the Weekly plot - instead of simply predicting a decreasing trend, it made a huge jump downwards and starting fluctuation a lot. This shows that NBeats requires a lot more data to train on before being able to handle all frequencies well. We already know from the creator's previous benchmarks that NBeats can outperform even the best models in the M4 competition when trained on the entire dataset, but our analysis here gives a fresh perspective on how a pure machine learning model like this stacks up when there is small instead of big data, illustrating just how data hungry these pure deep learning models are.
+We can see that for both these frequencies, it generates huge amounts of un-necessary fluctuations. For example, in the Daily plot, all it needed to do was to predict an increasing trend, but instead it generated huge amounts of noise. The converse is true for the Weekly plot - instead of simply predicting a decreasing trend, it made a huge jump downwards and starting fluctuating a lot. This shows that NBeats requires a lot more data to train on before being able to handle all frequencies well. We already know from the creators' previous benchmarks that NBeats can outperform even the best models in the M4 competition when trained on the entire dataset, but our analysis here gives a fresh perspective on how a pure machine learning model like this stacks up when there is small instead of big data, illustrating just how data hungry these pure deep learning models are.
  
  ### ES-RNN
  
@@ -108,7 +108,7 @@ The main problem with these forecasts is that they do not capture nearly enough 
 
 ## Conclusion
 
-In this benchmarking test, we have provided a fresh perspective on how these previously well-known models stacks up against each other when there is small instead of large amounts of data. We have found that when the dataset is sufficiently small, comprising only 100 time series of 100,000, the hybrid model ES-RNN performs the best, followed by Prophet, a statistical model, with NBeats, a pure deep learning model ranking last. It is interesting to see the reversal of results between ES-RNN and NBeats when working with small instead of large amounts of time series. 
+In this benchmarking test, we have provided a fresh perspective on how these previously well-known models stacks up against each other when there is small instead of large amounts of data. We have found that when the dataset is sufficiently small, comprising only 600 instead of 100,000 time series, the hybrid model ES-RNN performs the best, followed by Prophet, a statistical model, with NBeats, a pure deep learning model ranking last. It is interesting to see the reversal of results between ES-RNN and NBeats when working with small instead of large amounts of time series. 
 
 What is even more interesting is that _all_ these models performed worst than the Naive 2 benchmark in the presence of small data! While we should be prudent in jumping to conclusions based on this small project, it nudges us to follow the motto "with small data, the simplest models work best". This project has helped us to learn a great about state-of-the-art time series methods (both the theory and practical implementation), and we have no doubt that it'll be useful for us in our careers as future data scientists.
  

@@ -43,10 +43,10 @@ To measure the performance of the various models, we used the same benchmark des
  The black points represents our observations in the training set, while the red dots represents observations in the test set. The blue line up to the last black dot represents our in-sample fit, and out-of-sample forecasts in the region of the red dots. The blue area around the line is the confidence interval of our fit. We can see that the predictions do not perform well - only 4 out of the 6 forecasts are within the confidence interval and only one test sample lies on the forecast line. This is in line with our performance measures, since the Prophet model performs significantly worse than even the Naive 2 benchmark. Let us look at the other plots for the different frequencies:
  
  <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Quarterly_Prophet.png" width="500" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Monthly_Prophet.png" width="500" /> 
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Daily_Prophet.png" width="500" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Hourly_Prophet.png" width="500" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Quarterly_Prophet.png" width="450" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Monthly_Prophet.png" width="450" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Daily_Prophet.png" width="450" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Hourly_Prophet.png" width="450" />
 </p>
 
 We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. Perhaps only the predictions from the Hourly frequency performs slightly better, since most of the test set lies in the confidence interval. Nevertheless, the point forecasts are still bad, but it looks for this particular frequency, the model is even struggling to do a good in-sample fit because of the structure of the data.
@@ -54,6 +54,17 @@ We can see from the plots that regardless of the frequency, Prophet's prediction
  ### NBeats
  
  NBeats is a _pure_ deep learning model developed by Element AI for time series forecasting. This makes it substantially different from Prophet, which is a statistical model. The original developers have demonstrated that NBeats has outperformed even the best submissions in the M4 competition. However, since we are unable to work on the full dataset, we wanted to see how it stacks up against the other methods when there is much less data to train on. This is a test on just how flexible it is - while deep learning models like these can be extremely powerful, they require large amounts of data to train on. In addition, they suffer in interpretability and transparency relative to statistical methods due to their "black box" nature. While the authors have proposed specific configurations to make it more interpretable, we are still of the opinion that it is still not as interpretable as pure statistical methods. This is not necessarily a bad thing, since the benefits of interpretability highly depends on the application domain. Similar to before, we first look at the scores when trained on our data subset:
+ 
+ | sMAPE | MASE  | OWA  |
+|-------|-------|------|
+| 17.95 | 11.66 | 3.64 |
+
+Interestingly, we can see that NBeats performs _much worse_ when there is very little data to train on (100 time series instead of 100k). It performs even worse than Prophet, a statistical method. Let us now take a look at the hourly and monthly plots:
+
+ <p float="left">
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Quarterly_Prophet.png" width="450" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Monthly_Prophet.png" width="450" /> 
+</p>
  
  
  

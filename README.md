@@ -63,7 +63,7 @@ We can see from the plots that regardless of the frequency, Prophet's prediction
  
  | sMAPE | MASE  | OWA  |
 |-------|-------|------|
-| 9.945 | 3.459 | 1.34 |
+| 9.945 | 3.459 | 1.38 |
 
 
  

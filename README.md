@@ -45,8 +45,8 @@ To measure the performance of the various models, we used the same benchmark des
  <p float="left">
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Quarterly_Prophet.png" width="400" />
   <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Monthly_Prophet.png" width="400" /> 
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Daily_Prophet.png" width="450" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Hourly_Prophet.png" width="450" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Daily_Prophet.png" width="400" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Hourly_Prophet.png" width="400" />
 </p>
 
 We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. Perhaps only the predictions from the Hourly frequency performs slightly better, since most of the test set lies in the confidence interval. Nevertheless, the point forecasts are still bad, but it looks for this particular frequency, the model is even struggling to do a good in-sample fit because of the structure of the data.
@@ -62,15 +62,15 @@ We can see from the plots that regardless of the frequency, Prophet's prediction
 Interestingly, we can see that NBeats performs _much worse overall_ when there is very little data to train on (100 time series instead of 100k). It performs even worse than Prophet, a statistical method. This is because while NBeats did well in some frequencies (monthly and hourly), it did extremely poorly on others (10 times worse), and the overall score is an average across all frequencies. Let us now take a look at the hourly and monthly plots, which were the ones which performed well:
 
  <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Monthly_NBeats.png" width="450" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Hourly_NBeats.png" width="450" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Monthly_NBeats.png" width="400" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Hourly_NBeats.png" width="400" /> 
 </p>
  
  We can see that for these two frequencies, NBeats actually did a good job predicting the test data. Even though it failed to capture a lot of the fluctuations, it still predicted it in the same direction. This is already much better than Prophet's predictions, which did not even go in the same direction (i.e increasing or decreasing next). Let us now take a look at the frequencies  which were responsible for NBeat's horrible overall score:
  
   <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Daily_NBeats.png" width="450" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Weekly_NBeats.png" width="450" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Daily_NBeats.png" width="400" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Weekly_NBeats.png" width="400" /> 
 </p>
  
 We can see that for both these frequencies, it generates huge amounts of un-necessary fluctuations. For example, in the Daily plot, all it needed to do was to predict an increasing trend, but instead it generated huge amounts of noise. The converse is true for the Weekly plot - instead of simply predicting a decreasing trend, it made a huge jump downwards and starting fluctuation a lot. This shows that NBeats requires a lot more data to train on before being able to handle all frequencies well. We already know from the creator's previous benchmarks that NBeats can outperform even the best models in the M4 competition when trained on the entire dataset, but our analysis here gives a fresh perspective on how a pure machine learning model like this stacks up when there is "small" instead of "big data, illustrating just how data hungry these pure deep learning models are.
@@ -86,22 +86,22 @@ We can see that for both these frequencies, it generates huge amounts of un-nece
 Here, we can see that ES-RNN outperforms NBeats and Prophet on our data subset. This is an interesting result - while NBeats can do better when trained on the entire dataset, the ES-RNN model fares better when it comes to small data. Let us also take a look at the plots of our forecasts, starting off with the frequencies that performed well:
 
   <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Daily_ESRNN.png" width="450" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Weekly_ESRNN.png" width="450" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Daily_ESRNN.png" width="400" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Weekly_ESRNN.png" width="400" /> 
 </p>
  
 We can see that the forecasts are very close to the "ground truth". We take a look at the frequencies which performed moderately well:
 
 <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Yearly_ESRNN.png" width="450" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Quarterly_ESRNN.png" width="450" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Yearly_ESRNN.png" width="400" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Quarterly_ESRNN.png" width="400" /> 
 </p>
 
 We can see that although the forecasts are still quite off, at least they trend in the same direction. Finally, let us look at the worst performing frequencies:
 
 <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Monthly_ESRNN.png" width="450" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Hourly_ESRNN.png" width="450" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Monthly_ESRNN.png" width="400" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/esrnn/Hourly_ESRNN.png" width="400" /> 
 </p>
  
 The main problem with these forecasts is that they do not capture nearly enough fluctuations as the actual test set, which is surprising to us since the fluctuations were really pronounced even in the training sample. Our hypothesis is that the de-seasonalisation in the statistical component is primarily driving this phenomenon, and the neural network doesn't have enough training samples to learn from and correct this behaviour.

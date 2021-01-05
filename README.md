@@ -3,7 +3,7 @@
 
 ## Introduction
 This is the Github Repository containing the Deep Learning Project by Manutea Tarati and Sunny Wang, where we worked on Time Series Benchmarking. We benchmarked a few models: NBeats (a pure deep learning model), Prophets (a statistical model), and ES-RNN (a hybrid model) on the M4 competition dataset. \
-INSERT ORGANISATION OF FOLDERS \
+The organisation is self-explanatory - the Jupyter notebook can be found in the `code` folder, the `csv` files of the predicted values can be found in the `predictions` folder, while the plots can be found in the `images` folder. \
 In order to keep this `README` file short and concise, we only provide an analysis of the results. For the code, refer to the relevant folders. Pleasea read the technical summary in the link below for a description of the models.
 
 

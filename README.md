@@ -62,8 +62,8 @@ We can see from the plots that regardless of the frequency, Prophet's prediction
 Interestingly, we can see that NBeats performs _much worse_ when there is very little data to train on (100 time series instead of 100k). It performs even worse than Prophet, a statistical method. Let us now take a look at the hourly and monthly plots:
 
  <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Quarterly_Prophet.png" width="450" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Monthly_Prophet.png" width="450" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Monthly_NBeats.png" width="450" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/NBeats/Monthly_NBeats.png" width="450" /> 
 </p>
  
  

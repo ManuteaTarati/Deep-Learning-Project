@@ -38,15 +38,15 @@ To measure the performance of the various models, we used the same benchmark des
  
  In addition to solely looking at the scores, we can also take a look at the plots to see how the forecasts perform in general. Let us take a look at the plot for the yearly series:
  
- <img src = "https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Yearly_Prophet.png" width = "750" />
+ <img src = "https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Yearly_Prophet.png" width = "750" />
  
  The black points represents our observations in the training set, while the red dots represents observations in the test set. The blue line up to the last black dot represents our in-sample fit, and out-of-sample forecasts in the region of the red dots. The blue area around the line is the confidence interval of our fit. We can see that the predictions do not perform well - only 4 out of the 6 forecasts are within the confidence interval and only one test sample lies on the forecast line. This is in line with our performance measures, since the Prophet model performs significantly worse than even the Naive 2 benchmark. Let us look at the other plots for the different frequencies:
  
  <p float="left">
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Quarterly_Prophet.png" width="500" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Monthly_Prophet.png" width="500" /> 
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Daily_Prophet.png" width="500" />
-  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/Hourly_Prophet.png" width="500" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Quarterly_Prophet.png" width="500" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Monthly_Prophet.png" width="500" /> 
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Daily_Prophet.png" width="500" />
+  <img src="https://github.com/sunnywang93/Deep-Learning-Project/blob/main/images/prophet/Hourly_Prophet.png" width="500" />
 </p>
 
 We can see from the plots that regardless of the frequency, Prophet's predictions perform really badly and its forecast almost never aligns with the testing sample. Perhaps only the predictions from the Hourly frequency performs slightly better, since most of the test set lies in the confidence interval. Nevertheless, the point forecasts are still bad, but it looks for this particular frequency, the model is even struggling to do a good in-sample fit because of the structure of the data.
